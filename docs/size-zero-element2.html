@@ -25,13 +25,24 @@
       }
     }
 
+    .start {
+      height: 20px;
+      left: 10px;
+      width: 60px;
+      position: absolute;
+      top: 10px;
+    }
+
     .d1 {
-      animation: slide-in 3s linear 0 infinite;
       height: 0;
       left: 0;
       position: absolute;
       top: 0;
       width: 0;
+    }
+
+    .d1.animation {
+      animation: slide-in 3s linear 0 infinite;
     }
 
     .d2 {
@@ -49,7 +60,7 @@
   <div class="d1" style="top: 100px;"><div class="d2"></div></div>
   <div class="d1" style="top: 200px;"><div class="d2"></div></div>
   <script>
-    document.querySelector('.start').addEventListener(function() {
+    document.querySelector('.start').addEventListener('click', function() {
       document.querySelectorAll('.d1').forEach(function(e) {
         e.classList.add('animation')
       })
