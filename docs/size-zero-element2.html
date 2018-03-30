@@ -45,7 +45,15 @@
   </style>
 </head>
 <body>
+  <button class="start">start</button>
   <div class="d1" style="top: 100px;"><div class="d2"></div></div>
   <div class="d1" style="top: 200px;"><div class="d2"></div></div>
+  <script>
+    document.querySelector('.start').addEventListener(function() {
+      document.querySelectorAll('.d1').forEach(function(e) {
+        e.classList.add('animation')
+      })
+    })
+  </script>
 </body>
 </html>
